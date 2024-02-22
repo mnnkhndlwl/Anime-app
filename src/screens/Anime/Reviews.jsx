@@ -8,6 +8,7 @@ const Reviews = ({reviews}) => {
             style={{
               paddingLeft: 10,
               paddingRight: 10,
+              backgroundColor:"white"
             }}
           >
             <Text

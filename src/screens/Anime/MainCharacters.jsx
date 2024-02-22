@@ -21,6 +21,7 @@ const MainCharacters = ({ characters }) => {
         paddingLeft: 10,
         paddingRight: 10,
         paddingBottom: 10,
+        backgroundColor:"white"
       }}
     >
       <Text
@@ -32,7 +33,7 @@ const MainCharacters = ({ characters }) => {
         Main Characters
       </Text>
       <ScrollView horizontal>
-        {characters.nodes.map((character, index) => {
+        {characters?.nodes?.map((character, index) => {
           return (
             <TouchableOpacity
               key={index}

@@ -4,7 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Home } from "./src/screens/Home/Home";
 import { MagnifyingGlassIcon,ArrowLeftIcon } from "react-native-heroicons/outline";
-import { Anime } from "./src/screens/Anime/Anime";
+import Anime from "./src/screens/Anime/Anime";
 import Character from "./src/screens/Character/Character";
 import Search from "./src/screens/Search/Search";
 
@@ -23,7 +23,7 @@ export default function App() {
               color: "white",
             },
             headerStyle: {
-              backgroundColor: "red",
+              backgroundColor: "#FFCAD4",
             },
             headerRight: () => (
               <MagnifyingGlassIcon
@@ -64,3 +64,5 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+

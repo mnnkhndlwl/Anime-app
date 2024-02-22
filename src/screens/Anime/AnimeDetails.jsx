@@ -10,30 +10,33 @@ import {
 import { ScrollView } from "react-native-gesture-handler";
 
 export const AnimeDetails = ({data}) => {
-  const dynamicStyles = styles(data.Media.coverImage.color);
+  const dynamicStyles = styles(data?.coverImage?.color);
+  
   return (
     <>
-      <SafeAreaView>
+      <SafeAreaView style={{
+        backgroundColor:"white"
+      }} >
           <Image
             style={dynamicStyles.ImageHeader}
-            source={{ uri: data.Media.coverImage.large }}
+            source={{ uri: data?.coverImage?.large }}
           />
           <View style={dynamicStyles.AnimeHeaderContainer}>
             <View>
               <Text style={dynamicStyles.AnimeTitle}>
-                {data.Media.title.english?.length > 30
-                  ? data.Media.title.english.slice(0, 15)
-                  : data.Media.title.english}
+                {data?.title.english?.length > 30
+                  ? data?.title?.english.slice(0, 15)
+                  : data?.title?.english}
               </Text>
-              <Text style={dynamicStyles.AnimeTitle}>{data.Media.title.native}</Text>
+              <Text style={dynamicStyles.AnimeTitle}>{data?.title?.native}</Text>
               <Text style={dynamicStyles.AnimeStatus}>
-                Episodes : {data.Media.episodes}
-              </Text>
-              <Text style={dynamicStyles.AnimeStatus}>
-                Status : {data.Media.status}
+                Episodes : {data?.episodes}
               </Text>
               <Text style={dynamicStyles.AnimeStatus}>
-                Genre : {data.Media.genres.slice(0, 2).join(",")}
+                Status : {data?.status}
+              </Text>
+              <Text style={dynamicStyles.AnimeStatus}>
+                Genre : {data?.genres.slice(0, 2).join(",")}
               </Text>
             </View>
             <View style={dynamicStyles.AnimeScoreContainer}>
@@ -44,7 +47,7 @@ export const AnimeDetails = ({data}) => {
                   color: "white",
                 }}
               >
-                {data.Media.averageScore} +
+                {data?.averageScore} +
               </Text>
               <Text
                 style={{
@@ -62,7 +65,7 @@ export const AnimeDetails = ({data}) => {
             paddingRight:10
           }}>
             <Text style={dynamicStyles.AnimeStatus} >
-                {data.Media.description}
+                {data?.description}
             </Text>
           </View>
       </SafeAreaView>
@@ -81,6 +84,8 @@ const styles = (color) =>
       flexDirection: "row",
       justifyContent: "space-between",
       alignItems: "center",
+      backgroundColor:"white",
+      borderRadius:10
     },
     AnimeTitle: {
       fontSize: 20,
