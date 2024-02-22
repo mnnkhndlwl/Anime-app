@@ -5,6 +5,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Home } from "./src/screens/Home/Home";
 import { MagnifyingGlassIcon,ArrowLeftIcon } from "react-native-heroicons/outline";
 import { Anime } from "./src/screens/Anime/Anime";
+import Character from "./src/screens/Character/Character";
+import Search from "./src/screens/Search/Search";
 
 const Stack = createNativeStackNavigator();
 
@@ -37,6 +39,22 @@ export default function App() {
         <Stack.Screen
           name="Anime"
           component={Anime}
+          options={({ route,navigation }) => ({
+            headerShadowVisible: false,
+            headerShown: false,
+          })}
+        />
+        <Stack.Screen
+          name="Character"
+          component={Character}
+          options={({ route,navigation }) => ({
+            headerShadowVisible: false,
+            headerShown: false,
+          })}
+        />
+        <Stack.Screen
+          name="Search"
+          component={Search}
           options={({ route,navigation }) => ({
             headerShadowVisible: false,
             headerShown: false,

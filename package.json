@@ -23,7 +23,8 @@
     "react-native-progress": "^5.0.0",
     "react-native-svg": "^13.14.0",
     "react-native-screens": "^3.24.0",
-    "axios": "^1.4.0"
+    "axios": "^1.4.0",
+    "expo-dev-client": "~3.3.8"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

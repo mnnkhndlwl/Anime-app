@@ -7,6 +7,7 @@ import {
   Text,
   View,
 } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
 
 export const AnimeDetails = ({data}) => {
   const dynamicStyles = styles(data.Media.coverImage.color);
@@ -57,13 +58,13 @@ export const AnimeDetails = ({data}) => {
             </View>
           </View>
           <View style={{
-            padding:10
+            paddingLeft:10,
+            paddingRight:10
           }}>
             <Text style={dynamicStyles.AnimeStatus} >
                 {data.Media.description}
             </Text>
           </View>
-        
       </SafeAreaView>
     </>
   );
