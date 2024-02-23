@@ -1,4 +1,3 @@
 
-
-https://github.com/mnnkhndlwl/Anime-app/assets/75252077/a687fe39-dd5f-4b22-9def-7d472b2357bb
+[![Watch the video](https://i.stack.imgur.com/Vp2cE.png)](https://www.youtube.com/shorts/yS04nL5EIUg)
 
